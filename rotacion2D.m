@@ -16,7 +16,7 @@ v = [x' y' zeros(size(x',1),1)];
 %de rotacion con matriz de rotacion
 for theta=0:0.02:2*pi
 %Se obtiene la matriz de rotacion correspondiente a una rotacion
-%respecto al eje z
+%respecto al eje x
 R=[cos(theta),-sin(theta),0;sin(theta),cos(theta),0;0,0,1];
 %Se aplica dicha matriz a los datos originales
 vr = v*R';
@@ -28,7 +28,7 @@ pause(0.01)
 end
 for theta=0:0.02:2*pi
 %Se obtiene la matriz de rotacion correspondiente a una rotacion
-%respecto al eje z
+%respecto al eje y
 R=[cos(theta), 0, sin(theta);0,1,0;-sin(theta), 0,cos(theta)];
 %Se aplica dicha matriz a los datos originales
 vr = v*R';
